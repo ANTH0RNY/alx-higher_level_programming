@@ -13,6 +13,6 @@ typedef struct listint_t
 	struct listint_t *next;
 } listint_t;
 
-int check_cycle(listint_t *list)
+int check_cycle(listint_t *list);
 
 #endif
