@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' defines class square '''
 
+
 class square:
     """Represents a square
     Attributes:
