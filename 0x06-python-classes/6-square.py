@@ -12,17 +12,9 @@ class Square:
         Args:
            size (int): size of the sides of a square
         Returns: none
-        Raises:
-            TypeError: if the input is not an int
-            ValueError: if input is less than 0
         """
-        if type(size) is int:
-            if size < 0:
-                raise ValueError('size must be >= 0')
-            else:
-                self.__size = size
-        else:
-            raise TypeError('size must be an integer')
+        self.size = size
+        self.position = position
 
     def area(self):
         """Gets the area of a square
@@ -48,11 +40,11 @@ class Square:
             Returns: none
         """
 
-        if type(size) is int:
-            if size < 0:
+        if type(value) is int:
+            if value < 0:
                 raise ValueError('size must be >= 0')
             else:
-                self.__size = size
+                self.__size = value
         else:
             raise TypeError('size must be an integer')
 
