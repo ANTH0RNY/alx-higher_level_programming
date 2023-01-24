@@ -2,5 +2,5 @@
 ''' defines class square '''
 
 
-class square:
+class Square:
     pass

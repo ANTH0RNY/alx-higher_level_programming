@@ -2,7 +2,7 @@
 ''' defines class square '''
 
 
-class square:
+class Square:
     """Represents a square
     Attributes:
         __size (int): size of sides of the square
