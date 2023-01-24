@@ -13,7 +13,7 @@ class Square:
            size (int): size of the sides of a square
         Returns: none
         """
-        self.__size = size
+        self.size = size
 
     def area(self):
         """Gets the area of a square
