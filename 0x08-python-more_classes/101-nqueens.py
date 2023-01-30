@@ -20,6 +20,7 @@ if __name__ == "__main__":
         print("N must be at least 4")
         exit(1)
 
+    # initialize the answer list
     for i in range(n):
         a.append([i, None])
 
@@ -35,7 +36,7 @@ if __name__ == "__main__":
         if (already_exists(y)):
             return False
         i = 0
-        while (i < x):
+        while(i < x):
             if abs(a[i][1] - y) == abs(i - x):
                 return False
             i += 1
@@ -52,9 +53,10 @@ if __name__ == "__main__":
             clear_a(x)
             if reject(x, y):
                 a[x][1] = y
-                if (x == n - 1):
+                if (x == n - 1):  # accepts the solution
                     print(a)
                 else:
-                    nqueens(x + 1)
+                    nqueens(x + 1)  # moves on to next x value to continue
 
+    # start the recursive process at x = 0
     nqueens(0)
