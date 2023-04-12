@@ -1,13 +1,17 @@
 #!/usr/bin/node
-const number = Math.floor(process.argv[2]);
-if (number) {
-  for (let i = 0; i < number; i++) {
-    let row = '';
-    for (let j = 0; j < number; j++) {
-      row += 'X';
-    }
-    console.log(row);
+
+let r = 0;
+let c = 0;
+let newstr = '';
+if (process.argv[2] >= 0) {
+  const l = process.argv[2];
+  for (r = 0; r < l; r++) {
+    newstr += 'X';
   }
+  for (c = 0; c < l; c++) {
+    console.log(newstr);
+  }
+} else if (process.argv[2] < 0) {
 } else {
-  console.log('Missing Size');
+  console.log('Missing size');
 }
