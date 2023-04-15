@@ -9,15 +9,14 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     engine = create_engine(
-                f'mysql+mysqldb://{argv[1]}:{argv[2]}\
-                @localhost:3306/{argv[3]}',
-                pool_pre_ping=True)
+                'mysql+mysqldb://{}:{}@localhost:3306/{}'
+                .format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
     cities = session.query(City).order_by(City.id).all()
     for city in cities:
-        print(f"{city.id}: {city.name} -> {city.stste.name}")
+        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
     session.commit()
     session.close()
